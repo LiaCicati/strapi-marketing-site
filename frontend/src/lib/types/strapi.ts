@@ -43,11 +43,21 @@ export interface StrapiSingleResponse<T> {
 
 // Component types
 export interface NavigationItem {
+  __component: "layout.navigation-item";
   id: number;
   label: string;
   url: string;
   open_in_new_tab: boolean;
 }
+
+export interface NavigationDropdown {
+  __component: "layout.navigation-dropdown";
+  id: number;
+  label: string;
+  children: Omit<NavigationItem, "__component">[];
+}
+
+export type HeaderNavItem = NavigationItem | NavigationDropdown;
 
 export interface FooterColumn {
   id: number;
@@ -218,7 +228,7 @@ export interface SiteConfig {
   documentId: string;
   site_name: string;
   logo: StrapiImage | null;
-  header_navigation: NavigationItem[];
+  header_navigation: HeaderNavItem[];
   footer_columns: FooterColumn[];
   copyright_text: string | null;
   social_links: SocialLink[];

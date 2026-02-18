@@ -129,7 +129,14 @@ export async function getSiteConfig(): Promise<SiteConfig | null> {
     {
       populate: {
         logo: { fields: ["url", "alternativeText", "width", "height", "formats"] },
-        header_navigation: { populate: "*" },
+        header_navigation: {
+          on: {
+            "layout.navigation-item": { populate: "*" },
+            "layout.navigation-dropdown": {
+              populate: { children: { populate: "*" } },
+            },
+          },
+        },
         footer_columns: {
           populate: { links: { populate: "*" } },
         },

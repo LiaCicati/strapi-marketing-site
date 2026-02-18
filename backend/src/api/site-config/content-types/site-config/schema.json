@@ -22,9 +22,11 @@
       "allowedTypes": ["images"]
     },
     "header_navigation": {
-      "type": "component",
-      "repeatable": true,
-      "component": "layout.navigation-item"
+      "type": "dynamiczone",
+      "components": [
+        "layout.navigation-item",
+        "layout.navigation-dropdown"
+      ]
     },
     "footer_columns": {
       "type": "component",

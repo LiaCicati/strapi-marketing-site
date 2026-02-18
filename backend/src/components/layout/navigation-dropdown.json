@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_layout_navigation_dropdowns",
+  "info": {
+    "displayName": "Navigation Dropdown",
+    "icon": "layer",
+    "description": "A navigation dropdown with child links"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "children": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.navigation-item"
+    }
+  }
+}
