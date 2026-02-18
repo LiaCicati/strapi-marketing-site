@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_feature_cards",
+  "info": {
+    "displayName": "Feature Card",
+    "icon": "apps",
+    "description": "A single feature card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_pricing_cards",
+  "info": {
+    "displayName": "Pricing Card",
+    "icon": "shoppingCart",
+    "description": "A single pricing plan"
+  },
+  "options": {},
+  "attributes": {
+    "plan_name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    },
+    "billing_period": {
+      "type": "string"
+    },
+    "features": {
+      "type": "richtext"
+    },
+    "cta_label": {
+      "type": "string"
+    },
+    "cta_url": {
+      "type": "string"
+    },
+    "is_popular": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

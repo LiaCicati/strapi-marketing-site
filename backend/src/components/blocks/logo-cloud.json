@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_logo_clouds",
+  "info": {
+    "displayName": "Logo Cloud",
+    "icon": "grid",
+    "description": "Grid of partner/client logos"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "logos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    }
+  }
+}

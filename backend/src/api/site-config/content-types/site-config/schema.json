@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_configs",
+  "info": {
+    "singularName": "site-config",
+    "pluralName": "site-configs",
+    "displayName": "Site Config",
+    "description": "Global site configuration"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "site_name": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "header_navigation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.navigation-item"
+    },
+    "footer_columns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.footer-column"
+    },
+    "copyright_text": {
+      "type": "string"
+    },
+    "social_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.social-link"
+    }
+  }
+}

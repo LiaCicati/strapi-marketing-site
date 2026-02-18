@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_call_to_actions",
+  "info": {
+    "displayName": "Call To Action",
+    "icon": "cursor",
+    "description": "CTA section with headline and button"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "button_label": {
+      "type": "string"
+    },
+    "button_url": {
+      "type": "string"
+    }
+  }
+}

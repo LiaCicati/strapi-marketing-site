@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_testimonial_cards",
+  "info": {
+    "displayName": "Testimonial Card",
+    "icon": "quote",
+    "description": "A single testimonial"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text",
+      "required": true
+    },
+    "author_name": {
+      "type": "string",
+      "required": true
+    },
+    "author_role": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

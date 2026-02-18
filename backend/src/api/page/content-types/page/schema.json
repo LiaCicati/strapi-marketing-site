@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": "Dynamic pages with modular content blocks"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.hero",
+        "blocks.feature-grid",
+        "blocks.text-with-image",
+        "blocks.testimonials",
+        "blocks.call-to-action",
+        "blocks.pricing-table",
+        "blocks.contact-form",
+        "blocks.logo-cloud",
+        "blocks.faq",
+        "blocks.rich-text"
+      ]
+    }
+  }
+}

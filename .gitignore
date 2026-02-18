@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+.next/
+dist/
+build/
+.cache/
+
+# Strapi
+backend/.tmp/
+backend/.strapi/
+backend/.cache/
+backend/dist/
+backend/build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Strapi uploads (keep for local dev, may not want in git for production)
+# backend/public/uploads/

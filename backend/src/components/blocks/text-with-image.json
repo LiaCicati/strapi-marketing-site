@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_text_with_images",
+  "info": {
+    "displayName": "Text With Image",
+    "icon": "picture",
+    "description": "Text content alongside an image"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": ["image-left", "image-right"],
+      "default": "image-left"
+    }
+  }
+}

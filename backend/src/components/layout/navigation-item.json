@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_navigation_items",
+  "info": {
+    "displayName": "Navigation Item",
+    "icon": "link",
+    "description": "A navigation link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "open_in_new_tab": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
