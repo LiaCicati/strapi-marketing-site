@@ -1,6 +1,5 @@
 import { draftMode } from "next/headers";
-import { redirect } from "next/navigation";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 /**
  * Preview API route for Strapi 5 Preview feature.
@@ -35,6 +34,7 @@ export async function GET(request: NextRequest) {
     draft.enable();
   }
 
-  // Redirect to the actual content page
-  redirect(url);
+  // Build absolute redirect URL from the relative path
+  const redirectUrl = new URL(url, request.nextUrl.origin);
+  return NextResponse.redirect(redirectUrl);
 }
