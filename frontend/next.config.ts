@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
+
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -18,6 +20,20 @@ const nextConfig: NextConfig = {
         port: "1337",
       },
     ],
+  },
+  async headers() {
+    return [
+      {
+        // Allow Strapi admin to embed the frontend in an iframe for Preview
+        source: "/:path*",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: `frame-ancestors 'self' ${STRAPI_URL}`,
+          },
+        ],
+      },
+    ];
   },
 };
 
